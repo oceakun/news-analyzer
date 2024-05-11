@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Input and Containers</title>
+<style>
+  body {
+    font-family: Arial, sans-serif;
+  }
+
+  svg {
+    border:1px solid rgb(183, 180, 180);
+    padding:5px;
+    border-radius:5px;
+  filter: drop-shadow(3px 5px 2px rgb(0 0 0 / 0.4));
+}
+
+  .input-container {
+    display: flex;
+    flex-flow:column ;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin-top: 20px;
+  }
+
+  .input-wrapper {
+    display: flex;
+    align-items: center;
+    width: 80%;
+    border: 1px solid #ddd;
+    padding: 5px 20px;
+    gap:20px
+  }
+
+  .filter-row {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.filter-btn {
+    padding: 5px 15px;
+    border: 1px solid #ddd;
+    background-color: #f8f8f8;
+    cursor: pointer;
+}
+
+.filter-btn:hover {
+    background-color: #e7e7e7;
+}
+
+  input[type=text] {
+    flex-grow: 1;
+    border: none;
+    padding: 10px;
+    font-size: 16px;
+    height: 40px;
+    
+  }
+  input[type=text]:focus {
+    outline:none;
+  }
+
+  .input-wrapper svg {
+    transform: rotate(180deg);
+    margin-left: 10px;
+  }
+  .input-wrapper svg:hover{
+    cursor:pointer;
+  }
+
+  .container-list {
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    gap: 20px;
+    padding-top: 20px;
+  }
+  
+  .container {
+    width: 80%;
+    padding: 20px;
+    border: 1px solid #ddd;
+    position: relative;
+  }
+  .footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 10px;
+}
+
+.url {
+  text-decoration: none;
+  color: #0066cc;
+}
+
+.category {
+  color: #555;
+  font-size: 0.9em;
+}
+</style>
+</head>
+<body>
+
+<div class="input-container">
+<h1>News analyser</h1>
+  <div class="input-wrapper">
+    <svg
+     class="search-icon"
+      xmlns="http://www.w3.org/2000/svg"
+      width="24"
+      height="24"
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="black"
+      stroke-opacity="0.6"
+      stroke-width="2"
+      stroke-linecap="round"
+      stroke-linejoin="round"
+    >
+      <path d="M12 19L12 5"></path>
+      <path d="M5 12L12 5L19 12"></path>
+    </svg>
+        <input class="input-bar" type="text" placeholder="Enter your query here...">
+  </div>
+</div>
+<div class="filter-row">
+        <button class="filter-btn" data-filter="all">All</button>
+        <button class="filter-btn" data-filter="city">Metro City</button>
+        <button class="filter-btn" data-filter="business">Business</button>
+        <button class="filter-btn" data-filter="world">World</button>
+        <button class="filter-btn" data-filter="sports">Sports</button>
+        <button class="filter-btn" data-filter="technology">Entertainment</button>
+        <button class="filter-btn" data-filter="life-style">Life-style</button>
+    </div>
+<div class="container-list">
+</div>
+<script src="./index.js"></script>
+</body>
+</html>

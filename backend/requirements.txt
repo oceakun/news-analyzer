@@ -1,0 +1,9 @@
+flask
+flask_restful
+flask_sqlalchemy
+psycopg2
+pgvector
+transformers
+numpy
+bs4
+pandas
